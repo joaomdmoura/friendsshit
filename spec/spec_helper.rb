@@ -51,13 +51,9 @@ Spork.prefork do
     # instead of true.
     config.use_transactional_fixtures = true
 
-    config.extend VCR::RSpec::Macros
   end
 end
 
 Spork.each_run do
   FactoryGirl.reload
-  Dir[File.expand_path("app/controllers/user/*.rb")].each do |file|
-    require file
-  end
 end

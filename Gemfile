@@ -26,10 +26,8 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
-  gem 'capistrano'
   gem 'factory_girl_rails', '~> 3.2.0'
   gem 'rspec-rails', '~> 2.10.1'
-  gem 'watchr'
   gem 'awesome_print'
 end
 
@@ -39,10 +37,6 @@ group :test do
   gem 'rspec', '~> 2.10.0'
   gem 'shoulda-matchers'
   gem 'spork', '~> 0.9.1'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'launchy'
-  gem 'vcr', '1.11.3'
   gem 'webmock', '1.7.0'
 end
 
