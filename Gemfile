@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'koala', '~> 1.3.0'
 gem 'omniauth', '= 1.0.3'
 gem 'omniauth-facebook'
+gem 'kaminari'
 
 
 # Gems used only for assets and not required
