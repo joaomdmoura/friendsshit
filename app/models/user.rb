@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   NameFormat = /^[A-ZÀ-ÿ\s-]+$/i
 
   validates :email, :uniqueness => true, :format => {:with => EmailFormat}
-  validates :name, :presence => true, :format => { :with => NameFormat }
+  validates :name, :format => { :with => NameFormat }
+
+  has_many :shits , :through => :friends
 
 end

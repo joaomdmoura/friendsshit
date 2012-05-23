@@ -3,7 +3,7 @@ FactoryGirl.define do
   factory :friend do
     name "test"
     email "test@test.com"
-    fib 1
-    image "image"
+    fb_ib 1
+    photo "image"
   end
 end

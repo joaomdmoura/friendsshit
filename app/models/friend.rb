@@ -7,4 +7,7 @@ class Friend < ActiveRecord::Base
 
   validates :email, :uniqueness => true, :format => {:with => EmailFormat}
   validates :name, :format => { :with => NameFormat }
+
+  belongs_to :user
+  belongs_to :shits
 end
