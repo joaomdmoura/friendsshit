@@ -1,7 +1,7 @@
 class ShitsController < ApplicationController
 
   def index
-    @shits = Shit.order(:created_at).page(params[:page]).per(6)
+    @shits = Shit.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def create

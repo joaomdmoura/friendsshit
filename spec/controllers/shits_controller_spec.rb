@@ -13,4 +13,13 @@ describe ShitsController do
     end
   end
 
+  describe "GET create" do
+    it "should get all Shits" do
+      get :create, :shit => { :phrase => "My shit said",
+      												:photo	=> "My photo",
+      												:video	=> "My video on youtube" }
+      assigns(:shit).should == Shit.last
+    end
+  end
+
 end
