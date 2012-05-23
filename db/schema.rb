@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20120523035859) do
     t.integer  "fb_ib"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "shits_id"
+    t.integer  "shit_id"
     t.integer  "user_id"
   end
 

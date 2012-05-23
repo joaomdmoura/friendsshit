@@ -6,6 +6,7 @@ describe Shit do
 
   describe "relationships" do
     it { should have_many :user }
+    it { should have_many :friends }
   end
 
 end

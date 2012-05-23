@@ -13,6 +13,7 @@ describe User do
 
   describe "relationships" do
     it { should have_many :shits }
+    it { should have_many :friends }
   end
 
 end

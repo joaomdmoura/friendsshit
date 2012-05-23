@@ -12,7 +12,7 @@ describe Friend do
   end
 
   describe "relationships" do
-    it { should belong_to :shits }
+    it { should belong_to :shit }
     it { should belong_to :user }
   end
 

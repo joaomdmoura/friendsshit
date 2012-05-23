@@ -9,5 +9,5 @@ class Friend < ActiveRecord::Base
   validates :name, :format => { :with => NameFormat }
 
   belongs_to :user
-  belongs_to :shits
+  belongs_to :shit
 end

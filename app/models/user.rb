@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   validates :name, :format => { :with => NameFormat }
 
   has_many :shits , :through => :friends
+  has_many :friends
 
 end
