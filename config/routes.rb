@@ -1,5 +1,8 @@
 Friendsshit::Application.routes.draw do
   root :to => 'shits#index'
+
+  match "/shit/new", :to => "shits#create", :as => "create_shits"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
