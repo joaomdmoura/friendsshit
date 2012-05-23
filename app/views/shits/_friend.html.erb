@@ -1,0 +1,35 @@
+<li class="friend">
+  <div class="friends_photo glass">
+    <%= image_tag "image_test.jpg" %>
+  </div>
+  <div class="friends_phrase">
+    <span class="phrase">
+      “<%= shit.phrase %>”
+    </span>
+    <span class="friends_name">- João Moura</span>
+  </div>
+  <div class="friends_share">
+    <%= link_to image_tag("twitter_btn.jpg", :border => 0), root_path %>
+    <%= link_to image_tag("facebook_btn.jpg", :border => 0), root_path %>
+  </div>
+  <div class="friends_info">
+    <% 
+      how_long = ( Time.now - shit.created_at )
+      
+      if how_long < 60
+        time = "#{(how_long).round} seconds"
+      
+      elsif how_long < 3600
+        time = "#{(how_long / 60).round} minutes"
+      
+      elsif how_long < 86400
+        time = "#{(how_long / 60 / 60).round} hours"
+      
+      else
+        time = "#{(how_long / 60 / 60 / 24).round} days"
+      
+      end    
+    %>
+    <%= time %> ago near of Campo Belo
+  </div>
+</li>

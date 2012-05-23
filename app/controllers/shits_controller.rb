@@ -5,7 +5,11 @@ class ShitsController < ApplicationController
   end
 
   def create
-    shit = Shit.new(params[:shit]).save!
+    @shit = Shit.new(params[:shit])
+    @shit.save!
+    respond_to do |format|
+        format.js { render :layout=>false }
+    end
   end
 
 end
