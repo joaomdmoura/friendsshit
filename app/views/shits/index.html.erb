@@ -1,3 +1,26 @@
 <div id="post">
-	<%= form_tag create_shits_path %>
+	<%= form_for(:shit, :url => create_shits_path, :method => :post) do |f| %>
+		<%= f.text_field :phrase, { :class => "fields" , :placeholder => "Post your friend’s shit here!" } %>
+		<div id="post_plus">
+				<%= image_tag "plus_btn.png" %>
+		</div>
+		<%= image_submit_tag "post_btn.png", :id => "post_btn" %>
+	<% end %>
+</div>
+<div id="shits">
+	<ul>
+		<li class="friend">
+			<div class="friends_photo glass">
+				<%= image_tag "image_test.jpg" %>
+			</div>
+			<div class="friends_phrase">
+				<span class="phrase">
+					“Mas esse não tem a sensação de grudar no céu da boca”
+				</span>
+				<span class="friends_name">- Renato Elias</span>
+			</div>
+			<div class="friends_share"></div>
+			<div class="friends_info"></div>
+		</li>
+	</ul>
 </div>

@@ -1,0 +1,78 @@
+#shit_phrase {
+	border: none;
+	background-image: url('/assets/post_field.jpg');
+	width:439px;
+	height:52px;
+	padding-left:20px;
+	padding-right:130px;
+	font-size: 16px;
+	color: #d4d4d4;
+}
+
+#post_btn {
+	position: absolute;
+	right: 224px;
+	top: 119px;
+}
+
+#post_plus {
+	position: absolute;
+	right: 295px;
+	top: 119px;
+	cursor:pointer;
+}
+
+#shits ul {
+	padding:0; 
+	margin:0;
+	text-decoration:none;
+}
+
+.friend {
+	position:relative;
+	list-style-type:none;
+	width:355px;
+	height:148px;
+	cursor: pointer;
+	text-align: left;
+}
+
+.friend:hover {
+	list-style-type:none;
+	background-image: url('/assets/hover_shit.jpg');
+}
+
+.friends_photo {
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	width:120px;
+	height:122px;
+}
+
+.friends_photo img {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	overflow: hidden;
+	border: 1px solid #4b2f28;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.friends_phrase {
+	font-family:Helvetica, Arial, Verdana;
+	font-size:13px;
+	position: absolute;
+	left:138px;
+	padding:10px;
+}
+
+.phrase {
+	color:#4b3028;
+}
+
+.friends_name {
+	color:#955b14;
+}
