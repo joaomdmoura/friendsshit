@@ -1,0 +1,2 @@
+class ShitsController < ApplicationController
+end
