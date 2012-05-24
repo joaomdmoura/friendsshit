@@ -38,5 +38,5 @@ production:
   database: friendsshit_production
   pool: 5
   username: root
-  password:
+  password: 825315Md
   socket: /tmp/mysql.sock
