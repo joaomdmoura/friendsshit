@@ -37,29 +37,23 @@ $(document).ready(function() {
 	 
 			mapThisGoogle(position.coords.latitude,position.coords.longitude);
 	 
-			}, 
-			// function (error)
-			// {
-			// 	switch(error.code) 
-			// 	{
-			// 		case error.TIMEOUT:
-			// 			alert ('Timeout');
-			// 			break;
-			// 		case error.POSITION_UNAVAILABLE:
-			// 			alert ('Position unavailable');
-			// 			break;
-			// 		case error.PERMISSION_DENIED:
-			// 			alert ('Permission denied');
-			// 			break;
-			// 		case error.UNKNOWN_ERROR:
-			// 			alert ('Unknown error');
-			// 			break;
-			// 	}
-			// }
-			// );
+			},
+			function (error)
+			{
+				switch(error.code) 
+				{
+					case error.TIMEOUT:
+						break;
+					case error.POSITION_UNAVAILABLE:
+						break;
+					case error.PERMISSION_DENIED:
+						break;
+					case error.UNKNOWN_ERROR:
+						break;
+				}
+			}
+			);
 	}
-
-
 		
 	function mapThisGoogle(latitude,longitude)
 	{
