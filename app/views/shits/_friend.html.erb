@@ -6,7 +6,9 @@
     <span class="phrase">
       “<%= shit.phrase %>”
     </span>
+    <% if !shit.friends.empty? %>
     <span class="friends_name">- <%= shit.friends[0].name %></span>
+    <% end %>
   </div>
   <div class="friends_share">
     <%= link_to image_tag("twitter_btn.jpg", :border => 0), root_path %>
@@ -30,6 +32,6 @@
       
       end    
     %>
-    <%= time %> ago near of Campo Belo
+    <%= time %> ago near of <%= shit.location %>
   </div>
 </li>

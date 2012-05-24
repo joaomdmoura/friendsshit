@@ -5,12 +5,15 @@ class ShitsController < ApplicationController
   end
 
   def create
-    @friend       = Friend.new( params[:friend] )
     @shit         = Shit.new( params[:shit] )
-    @friend.shit  = @shit
+    
+    if params[:friend][:name] != ""
+      @friend       = Friend.new( params[:friend] ) 
+      @friend.shit  = @shit
+      @friend.save!
+    end
 
     @shit.save!
-    @friend.save!
 
     respond_to do |format|
         format.js { render :layout=>false }

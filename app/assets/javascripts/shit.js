@@ -2,7 +2,10 @@ $(document).ready(function() {
 	tool_tip_open = false
 
 	$('form').bind("ajax:complete", function(evt, data, status, xhr){
-  	$("#post_plus").click();
+  	if( tool_tip_open )
+		{
+  		$("#post_plus").click();
+  	}
   	$("#shit_phrase").val("");
   	$("#friend_name").val("");
 	});
@@ -26,5 +29,47 @@ $(document).ready(function() {
 			tool_tip_open = true
 		}
 	});
+	if (navigator.geolocation) 
+	{
+		navigator.geolocation.getCurrentPosition( 
+	 
+			function (position) {  
+	 
+			mapThisGoogle(position.coords.latitude,position.coords.longitude);
+	 
+			}, 
+			// function (error)
+			// {
+			// 	switch(error.code) 
+			// 	{
+			// 		case error.TIMEOUT:
+			// 			alert ('Timeout');
+			// 			break;
+			// 		case error.POSITION_UNAVAILABLE:
+			// 			alert ('Position unavailable');
+			// 			break;
+			// 		case error.PERMISSION_DENIED:
+			// 			alert ('Permission denied');
+			// 			break;
+			// 		case error.UNKNOWN_ERROR:
+			// 			alert ('Unknown error');
+			// 			break;
+			// 	}
+			// }
+			// );
+	}
 
+
+		
+	function mapThisGoogle(latitude,longitude)
+	{
+		var geocoder = new google.maps.Geocoder();
+	 	var latlon = new google.maps.LatLng(latitude, longitude, true);
+
+	  geocoder.geocode( {'location': latlon },
+	  function(data, status) {
+	  	$("#shit_location").val(data[0].address_components[2].long_name);
+	  });
+		
+	}
 });
