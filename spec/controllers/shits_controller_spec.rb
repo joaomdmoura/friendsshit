@@ -15,9 +15,10 @@ describe ShitsController do
 
   describe "GET create" do
     it "should get all Shits" do
-      get :create, :shit => { :phrase => "My shit said",
+      get :create, { :shit => { :phrase => "My shit said",
       												:photo	=> "My photo",
-      												:video	=> "My video on youtube" }
+      												:video	=> "My video on youtube" },
+                     :friend => { :name => "Test User" }}
       assigns(:shit).should == Shit.last
     end
   end
