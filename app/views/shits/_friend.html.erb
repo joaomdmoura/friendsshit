@@ -32,6 +32,6 @@
       
       end    
     %>
-    <%= time %> ago near of <%= shit.location %>
+    <%= time %> ago <%= (shit.location != "") ? "near of #{shit.location}" : "" %>
   </div>
 </li>

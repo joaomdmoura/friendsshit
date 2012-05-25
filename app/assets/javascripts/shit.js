@@ -29,31 +29,33 @@ $(document).ready(function() {
 			tool_tip_open = true
 		}
 	});
-	if (navigator.geolocation) 
-	{
-		navigator.geolocation.getCurrentPosition( 
-	 
-			function (position) {  
-	 
-			mapThisGoogle(position.coords.latitude,position.coords.longitude);
-	 
-			},
-			function (error)
-			{
-				switch(error.code) 
+	$('#shit_phrase').focus(function() {
+	  if (navigator.geolocation) 
+		{
+			navigator.geolocation.getCurrentPosition( 
+		 
+				function (position) {  
+		 
+				mapThisGoogle(position.coords.latitude,position.coords.longitude);
+		 
+				},
+				function (error)
 				{
-					case error.TIMEOUT:
-						break;
-					case error.POSITION_UNAVAILABLE:
-						break;
-					case error.PERMISSION_DENIED:
-						break;
-					case error.UNKNOWN_ERROR:
-						break;
+					switch(error.code) 
+					{
+						case error.TIMEOUT:
+							break;
+						case error.POSITION_UNAVAILABLE:
+							break;
+						case error.PERMISSION_DENIED:
+							break;
+						case error.UNKNOWN_ERROR:
+							break;
+					}
 				}
-			}
-			);
-	}
+				);
+		}
+	});
 		
 	function mapThisGoogle(latitude,longitude)
 	{

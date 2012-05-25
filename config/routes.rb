@@ -2,6 +2,7 @@ Friendsshit::Application.routes.draw do
   root :to => 'shits#index'
 
   match "/shit/new", :to => "shits#create", :as => "create_shits"
+  match "/facbeook/oath_token", :to => "facebook#oath_token", :as => "generate_oath_token"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
