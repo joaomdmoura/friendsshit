@@ -1,5 +1,5 @@
 <div id="post_plus_tool_tip">
-	<%= link_to image_tag("facebook_data.png", :border => 0), generate_oath_token_path %>
+	<%= link_to image_tag("facebook_data.png", :border => 0), @oauth.url_for_oauth_code(:permissions => ["publish_actions", "publish_stream", "friends_photos", "friends_about_me"]) %>
 	<%= image_tag "tool_tip_or.png", :id => "or_tool_tip" %>
 	<%= text_field :friend, :name, { :class => "fields" , :placeholder => "Friend’s Name!" } %>
 </div>
