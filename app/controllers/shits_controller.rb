@@ -2,6 +2,7 @@ class ShitsController < ApplicationController
 
   def index
     fb_oath_token
+    get_fb_friends
     @shits  = Shit.order("created_at DESC").page(params[:page]).per(6)
     page = (params[:page]) ? params[:page].to_i : 1
     @next_page   = (page >= (Shit.count().to_f / 6)) ? 1 : page + 1 

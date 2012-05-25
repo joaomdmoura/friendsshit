@@ -4,12 +4,14 @@ class ApplicationController < ActionController::Base
   def fb_oath_token
     @oauth = Koala::Facebook::OAuth.new("368626389864429", "c43ca76ee324061d00ce7c434f59624f", "http://friendsshit.com/")
     if params[:code]
-    	p "================================================"
-    	p @oauth.url_for_access_token(params[:code])
-    	p @oauth.get_app_access_token
-    	p @oauth.get_access_token(params[:code])
-    	p "================================================"
+    	access_token = @oauth.get_access_token(params[:code])
+    	@graph = Koala::Facebook::API.new(access_token)
     end
+  end
+
+  def get_fb_friends
+  	@friends = @graph.get_connections("me", "friends")
+  	p @friends
   end
 
 end
