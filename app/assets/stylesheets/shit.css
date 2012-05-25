@@ -137,3 +137,17 @@
 #or_tool_tip {
   margin-top:10px;
 }
+
+#fb_post_plus_tool_tip {
+  filter: alpha(opacity=1); /* internet explorer */
+  -khtml-opacity: 1;      /* khtml, old safari */
+  -moz-opacity: 1;       /* mozilla, netscape */
+  opacity: 1;           /* fx, safari, opera */
+  background-image: url('/assets/tool_tip_02.png');
+  width:455px;
+  height:423px;
+  position:absolute;
+  right:270px;
+  top:155px;
+  z-index:10;
+}

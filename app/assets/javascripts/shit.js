@@ -22,6 +22,12 @@ $(document).ready(function() {
 			tool_tip_open = false
 		}
 		else {
+			$("#fb_post_plus_tool_tip").animate({
+    		opacity: 0,
+    		top: "-=15"
+  		}, 200, function(){
+  			$("#fb_post_plus_tool_tip").css("top", "-1400px");
+  		})
 			$("#post_plus_tool_tip").css("top", "140px").animate({
     		opacity: 1,
     		top: "+=15"

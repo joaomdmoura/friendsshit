@@ -12,8 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_fb_friends
-  	@friends = @graph.get_connections("me", "friends")
-  	p @friends
+  	@fb_friends = @graph.get_connections("me", "friends")
   end
 
 end
