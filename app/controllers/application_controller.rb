@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
     if params[:code]
     	access_token = @oauth.get_access_token(params[:code])
     	@graph = Koala::Facebook::API.new(access_token)
+    	return true
     end
+    return false
   end
 
   def get_fb_friends
