@@ -3,7 +3,6 @@ class ShitsController < ApplicationController
   def index
     p "============================================================="
     p @oauth
-    p @oauth.url_for_oauth_code
     p "============================================================="
     @shits  = Shit.order("created_at DESC").page(params[:page]).per(6)
     page = (params[:page]) ? params[:page].to_i : 1
