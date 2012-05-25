@@ -145,9 +145,29 @@
   opacity: 1;           /* fx, safari, opera */
   background-image: url('/assets/tool_tip_02.png');
   width:455px;
-  height:423px;
+  height:387px;
   position:absolute;
   right:270px;
   top:155px;
   z-index:10;
+  padding-top: 35px;
+}
+
+#find_friend_name {
+  border: none;
+  background: url('/assets/facebook_search_field.png');
+  background-color: none;
+  width:319px;
+  height:44px;
+  padding-left:15px;
+  padding-right:85px;
+  font-size: 16px;
+  color: #afa9a9;
+}
+
+#buscar_btn {
+  position: absolute;
+  right: 21px;
+  top: 39px; 
+  cursor:pointer;
 }

@@ -10,6 +10,24 @@ $(document).ready(function() {
   	$("#friend_name").val("");
 	});
 
+	$("#buscar_btn").click(function(){
+		friend_name = $("#find_friend_name").val();
+		friends_found = [];
+		console.log(friends);
+		$.each(friends, function() {
+			pattern = ".*" + friend_name.toLowerCase() + ".*";
+			friend_match = this.name.match(new RegExp(pattern, "gi"));
+      if( friend_match ){
+      	console.log(friend_match);
+      	friends_found.push(this);
+      }
+   	});
+		$.each(friends_found, function() {
+			$(".friends_found").remove();
+			$("#fb_post_plus_tool_tip").append("<div class='friends_found'>lol"+this.name+"</div>")
+   	});
+	});
+
 	$("#post_plus").click(function() {
 		if( tool_tip_open )
 		{
@@ -35,6 +53,7 @@ $(document).ready(function() {
 			tool_tip_open = true
 		}
 	});
+
 	$('#shit_phrase').focus(function() {
 	  if (navigator.geolocation) 
 		{

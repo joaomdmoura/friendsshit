@@ -1,8 +1,9 @@
 <script type="text/javascript">
-<% p fb_friends %>
-lol  = <%= fb_friends %>;
-console.log(lol);
+	friends = <%= fb_friends.html_safe %>;
 </script>
 <div id="fb_post_plus_tool_tip">
-
+	<%= form_tag("", :onsubmit =>"return false") do |f| %>
+    <%= text_field :find_friend, "name", { :class => "fields" , :placeholder => "Post your friend’s shit here!" } %>
+    <%= image_submit_tag "buscar_btn.png", :id => "buscar_btn" %>
+  <% end %>
 </div>

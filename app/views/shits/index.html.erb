@@ -6,9 +6,9 @@
         <%= image_tag "plus_btn.png" %>
     </div>
     <%= render :partial => "plus" %>
-    <%= render :partial => "fb_friends", :locals => { :fb_friends => @fb_friends } if @fb_friends %>
     <%= image_submit_tag "post_btn.png", :id => "post_btn" %>
   <% end %>
+  <%= render :partial => "fb_friends", :locals => { :fb_friends => @fb_friends.to_json } if @fb_friends %>
 </div>
 <div id="shits">
   <ul>
