@@ -1,0 +1,36 @@
+<div class="friend">
+  <div class="friends_photo glass">
+    <%= image_tag shit.friends[0].photo.thumb('160x160#').url if !shit.friends.empty? %>
+  </div>
+  <div class="friends_phrase">
+    <span class="phrase">
+      “<%= shit.phrase %>”
+    </span>
+    <% if !shit.friends.empty? %>
+    <span class="friends_name">- <%= shit.friends[0].name %></span>
+    <% end %>
+    <br />
+    <% 
+      how_long = ( Time.now - shit.created_at )
+      
+      if how_long < 60
+        time = "#{(how_long).round} seconds"
+      
+      elsif how_long < 3600
+        time = "#{(how_long / 60).round} minutes"
+      
+      elsif how_long < 86400
+        time = "#{(how_long / 60 / 60).round} hours"
+      
+      else
+        time = "#{(how_long / 60 / 60 / 24).round} days"
+      
+      end    
+    %>
+    <span class="friends_info"><%= time %> ago <%= (shit.location != "") ? "near of #{shit.location}" : "" %></span>
+    <br/>
+    <br />
+    <%= link_to image_tag("twitter_btn.jpg", :border => 0), root_path %>
+    <%= link_to image_tag("facebook_btn.jpg", :border => 0), root_path %>
+  </div>
+</div>

@@ -10,6 +10,8 @@ gem 'koala', '~> 1.3.0'
 gem 'omniauth', '= 1.0.3'
 gem 'omniauth-facebook'
 gem 'kaminari'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.12'
 
 
 # Gems used only for assets and not required

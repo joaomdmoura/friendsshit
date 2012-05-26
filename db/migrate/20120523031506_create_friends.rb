@@ -3,7 +3,7 @@ class CreateFriends < ActiveRecord::Migration
     create_table :friends do |t|
       t.string :name
       t.string :email
-      t.string :photo
+      t.string :photo_uid
       t.integer :fb_ib
 
       t.timestamps
