@@ -9,7 +9,7 @@ $(document).ready(function() {
     $("#shit_phrase").val("");
     $("#friend_name").val("");
   });
-
+  
   $("#buscar_btn").click(function(){
     $("#all_fb_friends").fadeOut(200, function() {
       $("#ajax_loader").fadeIn(200);
@@ -43,14 +43,18 @@ $(document).ready(function() {
         }
         $(this).css("width", n_width);
         $(this).css("height", n_height);
+        $("#all_fb_friends").animate({
+          opacity: 1
+        }, 300);
       });
-    }, 3100);
+    }, 3300);
     setTimeout(function(){
       $("#ajax_loader").fadeOut(200, function(){
         $("#all_fb_friends").fadeIn(200);
       });
     }, 3000);
   });
+
 
 
   $("#post_plus").click(function() {

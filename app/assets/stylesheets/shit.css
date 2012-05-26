@@ -177,6 +177,10 @@
 
 #all_fb_friends {
   display: none;
+  filter: alpha(opacity=0); /* internet explorer */
+  -khtml-opacity: 0;      /* khtml, old safari */
+  -moz-opacity: 0;       /* mozilla, netscape */
+  opacity: 0;           /* fx, safari, opera */
 }
 
 .fb_friends_photo {
@@ -188,11 +192,6 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 16px;
-}
-
-.fb_friends_photo img{
-  min-width:122px;
-  min-height:124px;
 }
 
 .fb_friends_photo div {
