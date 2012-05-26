@@ -31,6 +31,9 @@ $(document).ready(function() {
       $.each($(".fb_friends_photo img"), function() {
         width       = parseInt($(this).css("width"));
         height      = parseInt($(this).css("height"));
+        console.log($(this));
+        console.log(width);
+        console.log(height);
         h_porportion  =  height / width;
         w_porportion  =  width / height;
         if (h_porportion > w_porportion){
@@ -43,16 +46,14 @@ $(document).ready(function() {
         }
         $(this).css("width", n_width);
         $(this).css("height", n_height);
-        $("#all_fb_friends").animate({
-          opacity: 1
-        }, 300);
       });
-    }, 1000);
-    setTimeout(function(){
-      $("#ajax_loader").fadeOut(200, function(){
-        $("#all_fb_friends").fadeIn(200);
-      });
+      $("#all_fb_friends").animate({
+        opacity: 1
+      }, 100)
     }, 500);
+    $("#ajax_loader").fadeOut(200, function(){
+      $("#all_fb_friends").fadeIn(200);
+    });
   });
 
 
