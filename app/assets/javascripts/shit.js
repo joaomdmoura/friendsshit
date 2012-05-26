@@ -11,29 +11,24 @@ $(document).ready(function() {
   });
   
   $("#buscar_btn").click(function(){
-    $("#all_fb_friends").fadeOut(200, function() {
-      $("#ajax_loader").fadeIn(200);
-      friend_name = $("#find_friend_name").val();
-      friends_found = [];
-      $.each(friends, function() {
-        pattern = ".*" + friend_name + ".*";
-        friend_match = this.name.match(new RegExp(pattern, "gi"));
-        if( friend_match ){
-          friends_found.push(this);
-        }
-      });
-      $(".fb_friends_photo").remove();
-      $.each(friends_found, function() {
-        $("#all_fb_friends").append("<div id='"+this.id+"' class='fb_friends_photo glass'><div><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
-      });
+    $(".fb_friends_photo").remove();
+    $("#ajax_loader").fadeIn(200);
+    friend_name = $("#find_friend_name").val();
+    friends_found = [];
+    $.each(friends, function() {
+      pattern = ".*" + friend_name + ".*";
+      friend_match = this.name.match(new RegExp(pattern, "gi"));
+      if( friend_match ){
+        friends_found.push(this);
+      }
+    });    
+    $.each(friends_found, function() {
+      $("#all_fb_friends").append("<div id='"+this.id+"' class='fb_friends_photo glass'><div><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
     });
     setTimeout(function(){
       $.each($(".fb_friends_photo img"), function() {
         width       = parseInt($(this).css("width"));
         height      = parseInt($(this).css("height"));
-        console.log($(this));
-        console.log(width);
-        console.log(height);
         h_porportion  =  height / width;
         w_porportion  =  width / height;
         if (h_porportion > w_porportion){
@@ -48,14 +43,10 @@ $(document).ready(function() {
         $(this).css("height", n_height);
       });
       $("#ajax_loader").fadeOut(200, function(){
-        $("#all_fb_friends").animate({
-          opacity: 1
-        }, 100)
+        $(".fb_friends_photo").animate({opacity: 1}, 200)
       });
-    }, 500);
+    }, 1500);
   });
-
-
 
   $("#post_plus").click(function() {
     if( tool_tip_open )
