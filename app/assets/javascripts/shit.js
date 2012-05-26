@@ -47,13 +47,12 @@ $(document).ready(function() {
         $(this).css("width", n_width);
         $(this).css("height", n_height);
       });
-      $("#all_fb_friends").animate({
-        opacity: 1
-      }, 100)
+      $("#ajax_loader").fadeOut(200, function(){
+        $("#all_fb_friends").animate({
+          opacity: 1
+        }, 100)
+      });
     }, 500);
-    $("#ajax_loader").fadeOut(200, function(){
-      $("#all_fb_friends").fadeIn(200);
-    });
   });
 
 

@@ -176,7 +176,6 @@
 }
 
 #all_fb_friends {
-  display: none;
   filter: alpha(opacity=0); /* internet explorer */
   -khtml-opacity: 0;      /* khtml, old safari */
   -moz-opacity: 0;       /* mozilla, netscape */
