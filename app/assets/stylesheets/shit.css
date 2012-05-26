@@ -190,6 +190,11 @@
   margin-bottom: 16px;
 }
 
+.fb_friends_photo img{
+  min-width:122px;
+  min-height:124px;
+}
+
 .fb_friends_photo div {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
