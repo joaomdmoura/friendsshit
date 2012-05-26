@@ -26,6 +26,8 @@
   position: relative;
   left: 155px;
   top: 20px;
+  margin: 0 auto;
+  width: 970px;
 }
 
 #shits ul {
@@ -54,8 +56,9 @@
   position: absolute;
   top: 13px;
   left: 13px;
-  width:120px;
-  height:122px;
+  width:122px;
+  height:124px;
+  overflow: hidden;
 }
 
 .friends_photo img {
@@ -170,4 +173,34 @@
   right: 21px;
   top: 39px; 
   cursor:pointer;
+}
+
+.fb_friends_photo {
+  float: left;
+  top: 13px;
+  left: 13px;
+  width:122px;
+  height:124px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+
+.fb_friends_photo div {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #4b2f28;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+  width:122px;
+  height:124px;
+  overflow: hidden;
+}
+
+#all_fb_friends {
+  overflow: auto;
+  height: 322px;
 }
