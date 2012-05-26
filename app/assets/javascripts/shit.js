@@ -47,12 +47,12 @@ $(document).ready(function() {
           opacity: 1
         }, 300);
       });
-    }, 3300);
+    }, 1000);
     setTimeout(function(){
       $("#ajax_loader").fadeOut(200, function(){
         $("#all_fb_friends").fadeIn(200);
       });
-    }, 3000);
+    }, 500);
   });
 
 
