@@ -11,52 +11,47 @@ $(document).ready(function() {
   });
 
   $("#buscar_btn").click(function(){
-    friend_name = $("#find_friend_name").val();
-    friends_found = [];
-    $.each(friends, function() {
-      pattern = ".*" + friend_name + ".*";
-      friend_match = this.name.match(new RegExp(pattern, "gi"));
-      if( friend_match ){
-        friends_found.push(this);
-      }
+    $("#all_fb_friends").fadeOut(200, function() {
+      $("#ajax_loader").fadeIn(200);
+      friend_name = $("#find_friend_name").val();
+      friends_found = [];
+      $.each(friends, function() {
+        pattern = ".*" + friend_name + ".*";
+        friend_match = this.name.match(new RegExp(pattern, "gi"));
+        if( friend_match ){
+          friends_found.push(this);
+        }
+      });
+      $(".fb_friends_photo").remove();
+      $.each(friends_found, function() {
+        $("#all_fb_friends").append("<div id='"+this.id+"' class='fb_friends_photo glass'><div><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
+      });
     });
-    $(".fb_friends_photo").remove();
-    $.each(friends_found, function() {
-      $("#all_fb_friends").append("<div class='fb_friends_photo glass'><div><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
-      img = $(".fb_friends_photo img")
-      img = img[img.length-1]
-      width       = parseInt($(img).css("width"));
-      height      = parseInt($(img).css("height"));
-      h_porportion  =  height / width;
-      w_porportion  =  width / height;
-      if (h_porportion > w_porportion){
-        n_height    = 124 * h_porportion;
-        n_width     = 124;
-      }
-      else {
-        n_width     = 122  * w_porportion;  
-        n_height    = 122;
-      }
-      $(img).css("width", n_width);
-      $(img).css("height", n_height);
-    });
-    $.each($(".fb_friends_photo img"), function() {
-      width       = parseInt($(this).css("width"));
-      height      = parseInt($(this).css("height"));
-      h_porportion  =  height / width;
-      w_porportion  =  width / height;
-      if (h_porportion > w_porportion){
-        n_height    = 124 * h_porportion;
-        n_width     = 124;
-      }
-      else {
-        n_width     = 122  * w_porportion;  
-        n_height    = 122;
-      }
-      $(this).css("width", n_width);
-      $(this).css("height", n_height);
-    });
+    setTimeout(function(){
+      $.each($(".fb_friends_photo img"), function() {
+        width       = parseInt($(this).css("width"));
+        height      = parseInt($(this).css("height"));
+        h_porportion  =  height / width;
+        w_porportion  =  width / height;
+        if (h_porportion > w_porportion){
+          n_height    = 124 * h_porportion;
+          n_width     = 124;
+        }
+        else {
+          n_width     = 122  * w_porportion;  
+          n_height    = 122;
+        }
+        $(this).css("width", n_width);
+        $(this).css("height", n_height);
+      });
+    }, 3100);
+    setTimeout(function(){
+      $("#ajax_loader").fadeOut(200, function(){
+        $("#all_fb_friends").fadeIn(200);
+      });
+    }, 3000);
   });
+
 
   $("#post_plus").click(function() {
     if( tool_tip_open )

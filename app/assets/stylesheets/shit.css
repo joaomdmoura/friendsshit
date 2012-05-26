@@ -158,7 +158,7 @@
 
 #find_friend_name {
   border: none;
-  background: url('/assets/facebook_search_field.png');
+  background: url('/assets/fb_search_field.png');
   background-color: none;
   width:319px;
   height:44px;
@@ -173,6 +173,10 @@
   right: 21px;
   top: 39px; 
   cursor:pointer;
+}
+
+#all_fb_friends {
+  display: none;
 }
 
 .fb_friends_photo {
@@ -203,4 +207,9 @@
 #all_fb_friends {
   overflow: auto;
   height: 322px;
+}
+
+#ajax_loader {
+  margin-top:100px;
+  display: none;
 }
