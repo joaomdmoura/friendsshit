@@ -1,5 +1,6 @@
 <div id="post">
   <%= form_for(:shit, :url => create_shits_path, :method => :post, :remote => true, :html => {:id => "post_shit"}) do |f| %>
+    <div id="fb_pic"><div></div></div>
     <%= f.text_field :phrase, { :class => "fields" , :placeholder => "Post your friend’s shit here!" } %>
     <%= f.hidden_field :location %>
     <div id="post_plus">

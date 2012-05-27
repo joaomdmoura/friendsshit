@@ -3,6 +3,7 @@ $(document).ready(function() {
 
   $('form').bind("ajax:complete", function(evt, data, status, xhr){
     $("#loading").fadeOut(200);
+    $("#fb_pic").fadeOut(200);
      if( tool_tip_open )
     {
       $("#post_plus").click();
@@ -41,15 +42,18 @@ $(document).ready(function() {
     });
     setTimeout(function(){
       $.each($(".fb_friends_photo img"), function() {
-        resize_image(this);
+        resize_image(this, 122, 124);
       });
       $("#ajax_loader").fadeOut(200, function(){
         $(".fb_friends_photo").animate({opacity: 1}, 200)
       });
       $('#all_fb_friends .fb_friends_photo').click(function(){
-        img = $(this).find('img').attr("src");
+        resize_image($(this).find('img'), 50, 50);
+        img = $(this).find('img');
+        $("#fb_pic div").append( img );
+        $("#fb_pic").fadeIn(200);
         $("#friend_name").val($(this).attr('id'));
-        $('.photo_friends').val(img);
+        $('.photo_friends').val(img.attr("src"));
         $("#fb_post_plus_tool_tip").animate({
             opacity: 0,
             top: "-=15"
@@ -60,18 +64,18 @@ $(document).ready(function() {
     }, 1500);
   });
 
-  function resize_image(image) {
-    width       = parseInt($(image).css("width"));
-    height      = parseInt($(image).css("height"));
-    h_porportion  =  height / width;
-    w_porportion  =  width / height;
+  function resize_image(image, height, width) {
+    old_width       = parseInt($(image).css("width"));
+    old_height      = parseInt($(image).css("height"));
+    h_porportion    =  old_height / old_width;
+    w_porportion    =  old_width / old_height;
     if (h_porportion > w_porportion){
-      n_height    = 124 * h_porportion;
-      n_width     = 124;
+      n_height      = height * h_porportion;
+      n_width       = height;
     }
     else {
-      n_width     = 122  * w_porportion;  
-      n_height    = 122;
+      n_width       = width  * w_porportion;  
+      n_height      = width;
     }
     $(image).css("width", n_width);
     $(image).css("height", n_height);
