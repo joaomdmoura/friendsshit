@@ -11,7 +11,7 @@ class ShitsController < ApplicationController
     @shit = Shit.new( params[:shit] )
     
     if params[:friend][:name] != ""
-      params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "http://wwww.friendsshit.com/assets/troll/#{ 1 + rand(12) }.png"
+      params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "http://www.friendsshit.com/assets/troll/#{ 1 + rand(12) }.png"
       @friend       = Friend.new( params[:friend] ) 
       @friend.shit  = @shit
       @friend.save!
