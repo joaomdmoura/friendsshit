@@ -20,7 +20,7 @@ $(document).ready(function() {
     $("#loading").fadeOut(200);
   });
 
-  $(".friend").click(function(){
+  $("li.friend").click(function(){
     url = "/shit/" + $(this).find(".this_shit").attr("id");
     window.location = url;
   });
