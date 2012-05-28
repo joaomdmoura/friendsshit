@@ -26,8 +26,8 @@ class ShitsController < ApplicationController
                     "description" => "'#{@shit.phrase} %>'- #{@shit.friends[0].name}",
                     "picture"     => @shit.friends[0].photo.thumb('160x160#').url}
 
-      @graph.put_wall_post("Check this out! Sharing my friend's shit!", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
-      @graph.put_wall_post("Check this!, You said that haha! Sharing my friend's shit!", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
+      @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
+      @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
     end
 
     respond_to do |format|

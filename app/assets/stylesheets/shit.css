@@ -242,7 +242,7 @@ div.friend .friends_info {
   height: 322px;
 }
 
-#ajax_loader {
+#ajax_loader_fb {
   margin-top:100px;
   display: none;
 }

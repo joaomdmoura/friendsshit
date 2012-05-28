@@ -27,7 +27,7 @@ $(document).ready(function() {
   
   $("#buscar_btn").click(function(){
     $(".fb_friends_photo").remove();
-    $("#ajax_loader").fadeIn(200);
+    $("#ajax_loader_fb").fadeIn(200);
     friend_name = $("#find_friend_name").val();
     friends_found = [];
     $.each(friends, function() {
@@ -44,7 +44,7 @@ $(document).ready(function() {
       $.each($(".fb_friends_photo img"), function() {
         resize_image(this, 122, 124);
       });
-      $("#ajax_loader").fadeOut(200, function(){
+      $("#ajax_loader_fb").fadeOut(200, function(){
         $(".fb_friends_photo").animate({opacity: 1}, 200)
       });
       $('#all_fb_friends .fb_friends_photo').click(function(){
