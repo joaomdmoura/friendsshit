@@ -15,7 +15,7 @@ class ShitsController < ApplicationController
     @friend       = Friend.new( params[:friend] ) 
     @friend.shit  = @shit
 
-    if params[:friend][:fb_ib] != ""
+    if @shit.save! && @friend.save! && !@friend.fb_ib.nil?
       fb_oath_token
       shit_obj = {  "name"        => "Friend's Shit - Cuz shit happens!",
                     "link"        => "http://www.friendsshit.com/shit/#{@shit.id}",
@@ -23,10 +23,8 @@ class ShitsController < ApplicationController
                     "description" => "'#{@shit.phrase} %>'- #{@friend.name}",
                     "picture"     => @friend.photo.thumb('160x160#').url}
 
-      if @friend.save! && @shit.save!
-        @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
-        @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
-      end
+      @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
+      @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
     end
 
     respond_to do |format|
