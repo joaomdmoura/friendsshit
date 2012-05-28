@@ -10,16 +10,15 @@ class ShitsController < ApplicationController
   def create
     @shit = Shit.new( params[:shit] )
     
-    if params[:friend][:name] != ""
-      params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "http://www.friendsshit.com/assets/troll/#{ 1 + rand(12) }.png"
-      @friend       = Friend.new( params[:friend] ) 
-      @friend.shit  = @shit
-      @friend.save!
-    end
+    params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "http://www.friendsshit.com/assets/troll/#{ 1 + rand(12) }.png"
+    params[:friend][:name] = ( params[:friend][:name] != "" ) ? params[:friend][:name] != "" : "Anonymous"
+    @friend       = Friend.new( params[:friend] ) 
+    @friend.shit  = @shit
+    @friend.save!
 
     @shit.save!
 
-    if params[:friend][:fb_ib]
+    if params[:friend][:fb_ib] != ""
       fb_oath_token
       shit_obj = {  "name"        => "Friend's Shit - Cuz shit happens!",
                     "link"        => "http://www.friendsshit.com/shit/#{@shit.id}",
