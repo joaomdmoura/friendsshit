@@ -20,7 +20,11 @@
         how_long = ( Time.now - shit.created_at )
         
         if how_long < 60
-          time = "#{(how_long).round} seconds"
+          if how_long.nil?
+            time = "0 seconds"
+          else
+            time = "#{(how_long).round} seconds"
+          end
         
         elsif how_long < 3600
           time = "#{(how_long / 60).round} minutes"
