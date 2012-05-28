@@ -30,7 +30,7 @@
     <span class="friends_info"><%= time %> ago <%= (shit.location != "") ? "near of #{shit.location}" : "" %></span>
     <br/>
     <br />
-    <%= link_to image_tag("twitter_btn.jpg", :border => 0), "https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffriendsshit.com%2Fshit%2F#{shit.id}&source=tweetbutton&text=Friends%20Shit%20-%20Cuz%20shit%20happens!%20%7C%20'#{shit.phrase}'%20-%20#{shit.friends[0].name}&url=http%3A%2F%2Ffriendsshit.com%2Fshit%2F#{shit.id}" %>
+    <%= link_to image_tag("twitter_btn.jpg", :border => 0), "https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffriendsshit.com%2Fshit%2F#{shit.id}&source=tweetbutton&text=Friends%20Shit%20-%20Cuz%20shit%20happens!%20%7C%20'#{shit.phrase}'%20-%20#{shit.friends[0].name if !shit.friends.empty?}&url=http%3A%2F%2Ffriendsshit.com%2Fshit%2F#{shit.id}" %>
     <%= link_to image_tag("facebook_btn.jpg", :border => 0), "https://www.facebook.com/sharer.php?u=http://www.friendsshit.com/shit/#{shit.id}&t=Friend's Shit - Cuz shit happens!" %>
   </div>
 </div>
