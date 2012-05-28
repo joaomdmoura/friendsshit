@@ -20,8 +20,8 @@ class ShitsController < ApplicationController
       shit_obj = {  "name"        => "Friend's Shit - Cuz shit happens!",
                     "link"        => "http://www.friendsshit.com/shit/#{@shit.id}",
                     "caption"     => "A place to share yout friends shit and get some fun of others shits!",
-                    "description" => "'#{@shit.phrase} %>'- #{@shit.friends[0].name}",
-                    "picture"     => @shit.friends[0].photo.thumb('160x160#').url}
+                    "description" => "'#{@shit.phrase} %>'- #{@friend.name}",
+                    "picture"     => @friend.photo.thumb('160x160#').url}
 
       if @friend.save! && @shit.save!
         @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
