@@ -3,4 +3,6 @@
 	<%= image_tag "tool_tip_or.png", :id => "or_tool_tip" %>
 	<%= text_field :friend, :name, { :class => "fields" , :placeholder => "Friend’s Name!" } %>
 	<%= hidden_field :friend, :photo_url, { :class => "photo_friends" } %>
+	<%= hidden_field :friend, :fb_ib, { :class => "fb_ib" } %>
+	<%= hidden_field :fb, :code, { :value => params[:code] } %>
 </div>

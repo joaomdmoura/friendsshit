@@ -38,7 +38,7 @@ $(document).ready(function() {
       }
     });    
     $.each(friends_found, function() {
-      $("#all_fb_friends").append("<div id='"+this.name+"' class='fb_friends_photo glass'><div><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
+      $("#all_fb_friends").append("<div id='"+this.name+"' class='fb_friends_photo glass'><div id='"+this.id+"'><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
     });
     setTimeout(function(){
       $.each($(".fb_friends_photo img"), function() {
@@ -53,6 +53,7 @@ $(document).ready(function() {
         $("#fb_pic div").append( img );
         $("#fb_pic").fadeIn(200);
         $("#friend_name").val($(this).attr('id'));
+        $(".fb_ib").val($(this).find("div").attr('id'));
         $('.photo_friends').val(img.attr("src"));
         $("#fb_post_plus_tool_tip").animate({
             opacity: 0,
