@@ -10,7 +10,7 @@
       <meta property="og:title" content="Friend's Shit - Cuz shit happens!" />
       <meta property="og:description" content="'<%= @shit.phrase %>'<%= " - #{@shit.friends[0].name}" if !@shit.friends.empty?%>" />
       <% if !@shit.friends.empty? %>
-        <meta property="og:image" content="<%= @shit.friends[0].photo.thumb('160x160#').url %>" />
+        <meta property="og:image" content="http://www.friendsshit.com<%= @shit.friends[0].photo.thumb('160x160#').url %>" />
       <% else %>
         <meta property="og:image" content="http://www.friendsshit.com/assets/mini-logo.png" />
       <% end %>
