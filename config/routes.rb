@@ -5,6 +5,11 @@ Friendsshit::Application.routes.draw do
   match "/shit/:id", :to => "shits#show", :as => "shit"
   match "/facbeook/oath_token", :to => "facebook#oath_token", :as => "generate_oath_token"
 
+  namespace :api, :path => 'api' do
+    match "shits/get", :to => "shits#get_shits"
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
