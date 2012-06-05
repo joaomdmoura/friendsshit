@@ -7,6 +7,7 @@ Friendsshit::Application.routes.draw do
 
   namespace :api, :path => 'api' do
     match "shits/get", :to => "shits#get_shits"
+    match "shits/create", :to => "shits#create_shit"
   end
 
 
