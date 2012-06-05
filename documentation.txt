@@ -45,7 +45,6 @@ Documentation
 
       * shit = {
         :phrase   => String,
-        :photo    => File,                              ## Shit photo support, only via API
         :location => String                             ## Only Neighborhood
       }
 

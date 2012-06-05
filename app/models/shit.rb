@@ -1,6 +1,5 @@
 class Shit < ActiveRecord::Base
-  attr_accessible :fid, :photo_url, :phrase, :uid, :video, :location
-	image_accessor :photo
+  attr_accessible :fid, :phrase, :uid, :video, :location
 
   validates :phrase, :presence => true
 
