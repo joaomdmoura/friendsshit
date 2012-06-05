@@ -2,7 +2,7 @@ class Api::ShitsController < ApiController
 
   def get_shits
     
-    @shits = Shit.select("shits.*, friends.*").joins(:friends).order("created_at DESC").page(params[:page]).per(params[:per_page])
+    @shits = Shit.select("shits.*, friends.*").joins(:friends).order("shits.created_at DESC").page(params[:page]).per(params[:per_page])
     @shits.map! {|x| x[:photo_url] = Friend.find([x.id])[0].photo.thumb('120x122#').url; x }
     render :json => @shits
 
