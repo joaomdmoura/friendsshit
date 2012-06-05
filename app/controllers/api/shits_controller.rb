@@ -2,12 +2,9 @@ class Api::ShitsController < ApiController
 
   def get_shits
     
-    @shits = Shit.select("shits.*, friends.*").joins(:friends)
+    @shits = Shit.select("shits.*, friends.*").joins(:friends).order("created_at DESC").page(params[:page]).per(params[:per_page])
     @shits.map! {|x| x[:photo_url] = Friend.find([x.id])[0].photo.thumb('120x122#').url; x }
     render :json => @shits
-
-    #@shits = Shit.all
-    #render json: @friends.as_json(include: {:friends => {methods: [:thumb]]})
 
   end
 
@@ -34,6 +31,8 @@ class Api::ShitsController < ApiController
       @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"})
       @graph.put_wall_post("", {:link => "http://www.friendsshit.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
     end
+    
+    @shit[:friend] = @friend
     
     render :json => @shit
 
