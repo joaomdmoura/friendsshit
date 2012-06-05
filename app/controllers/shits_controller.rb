@@ -5,13 +5,6 @@ class ShitsController < ApplicationController
     @shits      = Shit.order("created_at DESC").page(params[:page]).per(6)
     page        = (params[:page]) ? params[:page].to_i : 1
     @next_page  = (page >= (Shit.count().to_f / 6)) ? 1 : page + 1 
-
-    respond_to do |format|
-      format.html
-      format.atom { render :layout => false }
-      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
-    end
-
   end
 
   def create
