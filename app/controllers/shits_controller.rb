@@ -8,8 +8,7 @@ class ShitsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.xml { render :shits => Shit.order("created_at DESC") }
-      format.rss { render :shits => Shit.order("created_at DESC"), :layout => false }
+      format.rss { render :layout => false }
     end
 
   end
