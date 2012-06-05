@@ -8,7 +8,8 @@ class ShitsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.rss { render :layout => false }
+      format.atom { render :layout => false }
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
     end
 
   end

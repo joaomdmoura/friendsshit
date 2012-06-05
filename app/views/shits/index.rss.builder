@@ -1,18 +1,15 @@
-xml.instruct! :xml, :version => "1.0" 
-xml.rss :version => "2.0" do
-  xml.channel do
-    xml.title "Friends' Shit"
-    xml.description "A place to share yout friends shit and get some fun of others shits!"
-    xml.link "http://www.friendsshit.com/assets/mini-logo.png"
+atom_feed :language => 'en-US' do |feed|
+  feed.title "Friends' Shit"
+  feed.updated @updated
 
-    for shit in @shits
-      xml.item do
-        xml.friend shit.friends[0].name
-        xml.photo mage_tag shit.friends[0].photo.thumb('120x122#').url if !shit.friends.empty?
-        xml.phrase "'#{shit.phrase}'"
-        xml.location shit.location
-        xml.link "http://www.friendsshit.com/shit/#{shit.id}"
-      end
+  @shits.each do |shit|
+    feed.entry( shit ) do |entry|
+      entry.friend shit.friends[0].name
+      entry.photo image_tag shit.friends[0].photo.thumb('120x122#').url, :type => 'html' if !shit.friends.empty?
+      entry.phrase "'#{shit.phrase}'"
+      entry.location shit.location
+      entry.link "http://www.friendsshit.com/shit/#{shit.id}"
+      entry.updated(shit.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")) 
     end
   end
 end
