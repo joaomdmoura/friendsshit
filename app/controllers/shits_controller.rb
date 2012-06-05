@@ -5,6 +5,12 @@ class ShitsController < ApplicationController
     @shits      = Shit.order("created_at DESC").page(params[:page]).per(6)
     page        = (params[:page]) ? params[:page].to_i : 1
     @next_page  = (page >= (Shit.count().to_f / 6)) ? 1 : page + 1 
+
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false }
+    end
+
   end
 
   def create
@@ -35,14 +41,6 @@ class ShitsController < ApplicationController
   def show
     index
     @shit = Shit.find(params[:id]);
-  end
-
-  def feed
-    @shits      = Shit.order("created_at DESC")
-
-    respond_to do |format|
-      format.rss { render :layout => false } #index.rss.builder
-    end
   end
 
 end
