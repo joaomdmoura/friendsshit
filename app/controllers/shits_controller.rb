@@ -37,4 +37,12 @@ class ShitsController < ApplicationController
     @shit = Shit.find(params[:id]);
   end
 
+  def feed
+    @shits      = Shit.order("created_at DESC")
+
+    respond_to do |format|
+      format.rss { render :layout => false } #index.rss.builder
+    end
+  end
+
 end
