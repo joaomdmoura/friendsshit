@@ -15,13 +15,23 @@
 		4C124713157DDE4E003A4EB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C124712157DDE4E003A4EB3 /* AppDelegate.m */; };
 		4C124716157DDE4F003A4EB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C124714157DDE4F003A4EB3 /* MainStoryboard.storyboard */; };
 		4C124719157DDE4F003A4EB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C124718157DDE4F003A4EB3 /* ViewController.m */; };
+		4CA5849F15AF22BA00314D05 /* bigger_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA5849E15AF22BA00314D05 /* bigger_top_bg.png */; };
+		4CA584A215AF234000314D05 /* friends_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA584A015AF234000314D05 /* friends_name.png */; };
+		4CA584A315AF234000314D05 /* friends_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA584A115AF234000314D05 /* friends_profile.png */; };
+		4CC66F8B1586FFC90057E779 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC66F871586FFC90057E779 /* logo.png */; };
+		4CC66F8C1586FFC90057E779 /* plus_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC66F881586FFC90057E779 /* plus_btn.png */; };
+		4CC66F8D1586FFC90057E779 /* post_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC66F891586FFC90057E779 /* post_bg.png */; };
+		4CC66F8E1586FFC90057E779 /* top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC66F8A1586FFC90057E779 /* top_bg.png */; };
+		4CD96BA315AF2E0600810AA0 /* input_field.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CD96BA215AF2E0600810AA0 /* input_field.png */; };
+		4CF581C215AFD87D004BB163 /* publish_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF581C115AFD87D004BB163 /* publish_btn.png */; };
+		9059B7A41C774025B0EAC3DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9692E65917B549ED888DFE18 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C1246FE157DDE4E003A4EB3 /* friendsshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friendsshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C124702157DDE4E003A4EB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4C124704157DDE4E003A4EB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4C124706157DDE4E003A4EB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C124702157DDE4E003A4EB3 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C124704157DDE4E003A4EB3 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C124706157DDE4E003A4EB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4C12470A157DDE4E003A4EB3 /* friendsshit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friendsshit-Info.plist"; sourceTree = "<group>"; };
 		4C12470C157DDE4E003A4EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C12470E157DDE4E003A4EB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -31,6 +41,17 @@
 		4C124715157DDE4F003A4EB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4C124717157DDE4F003A4EB3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4C124718157DDE4F003A4EB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4CA5849E15AF22BA00314D05 /* bigger_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigger_top_bg.png; path = friendsshit/images/bigger_top_bg.png; sourceTree = "<group>"; };
+		4CA584A015AF234000314D05 /* friends_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friends_name.png; path = friendsshit/images/friends_name.png; sourceTree = "<group>"; };
+		4CA584A115AF234000314D05 /* friends_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friends_profile.png; path = friendsshit/images/friends_profile.png; sourceTree = "<group>"; };
+		4CC66F871586FFC90057E779 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = friendsshit/images/logo.png; sourceTree = "<group>"; };
+		4CC66F881586FFC90057E779 /* plus_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus_btn.png; path = friendsshit/images/plus_btn.png; sourceTree = "<group>"; };
+		4CC66F891586FFC90057E779 /* post_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = post_bg.png; path = friendsshit/images/post_bg.png; sourceTree = "<group>"; };
+		4CC66F8A1586FFC90057E779 /* top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top_bg.png; path = friendsshit/images/top_bg.png; sourceTree = "<group>"; };
+		4CD96BA215AF2E0600810AA0 /* input_field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_field.png; path = friendsshit/images/input_field.png; sourceTree = "<group>"; };
+		4CF581C115AFD87D004BB163 /* publish_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = publish_btn.png; path = friendsshit/images/publish_btn.png; sourceTree = "<group>"; };
+		9692E65917B549ED888DFE18 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B412A57AAF2D4F109614536C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +62,7 @@
 				4C124703157DDE4E003A4EB3 /* UIKit.framework in Frameworks */,
 				4C124705157DDE4E003A4EB3 /* Foundation.framework in Frameworks */,
 				4C124707157DDE4E003A4EB3 /* CoreGraphics.framework in Frameworks */,
+				9059B7A41C774025B0EAC3DE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,9 +72,19 @@
 		4C1246F3157DDE4D003A4EB3 = {
 			isa = PBXGroup;
 			children = (
+				4CF581C115AFD87D004BB163 /* publish_btn.png */,
+				4CD96BA215AF2E0600810AA0 /* input_field.png */,
+				4CA584A015AF234000314D05 /* friends_name.png */,
+				4CA584A115AF234000314D05 /* friends_profile.png */,
+				4CA5849E15AF22BA00314D05 /* bigger_top_bg.png */,
+				4CC66F871586FFC90057E779 /* logo.png */,
+				4CC66F881586FFC90057E779 /* plus_btn.png */,
+				4CC66F891586FFC90057E779 /* post_bg.png */,
+				4CC66F8A1586FFC90057E779 /* top_bg.png */,
 				4C124708157DDE4E003A4EB3 /* friendsshit */,
 				4C124701157DDE4E003A4EB3 /* Frameworks */,
 				4C1246FF157DDE4E003A4EB3 /* Products */,
+				B412A57AAF2D4F109614536C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +102,7 @@
 				4C124702157DDE4E003A4EB3 /* UIKit.framework */,
 				4C124704157DDE4E003A4EB3 /* Foundation.framework */,
 				4C124706157DDE4E003A4EB3 /* CoreGraphics.framework */,
+				9692E65917B549ED888DFE18 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +141,7 @@
 				4C1246FA157DDE4E003A4EB3 /* Sources */,
 				4C1246FB157DDE4E003A4EB3 /* Frameworks */,
 				4C1246FC157DDE4E003A4EB3 /* Resources */,
+				E6BB95EA28FF4984A7A41CEC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,10 +184,36 @@
 			files = (
 				4C12470D157DDE4E003A4EB3 /* InfoPlist.strings in Resources */,
 				4C124716157DDE4F003A4EB3 /* MainStoryboard.storyboard in Resources */,
+				4CC66F8B1586FFC90057E779 /* logo.png in Resources */,
+				4CC66F8C1586FFC90057E779 /* plus_btn.png in Resources */,
+				4CC66F8D1586FFC90057E779 /* post_bg.png in Resources */,
+				4CC66F8E1586FFC90057E779 /* top_bg.png in Resources */,
+				4CA5849F15AF22BA00314D05 /* bigger_top_bg.png in Resources */,
+				4CA584A215AF234000314D05 /* friends_name.png in Resources */,
+				4CA584A315AF234000314D05 /* friends_profile.png in Resources */,
+				4CD96BA315AF2E0600810AA0 /* input_field.png in Resources */,
+				4CF581C215AFD87D004BB163 /* publish_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E6BB95EA28FF4984A7A41CEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C1246FA157DDE4E003A4EB3 /* Sources */ = {
@@ -235,6 +295,7 @@
 		};
 		4C12471D157DDE4F003A4EB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B412A57AAF2D4F109614536C /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendsshit/friendsshit-Prefix.pch";
@@ -246,6 +307,7 @@
 		};
 		4C12471E157DDE4F003A4EB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B412A57AAF2D4F109614536C /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friendsshit/friendsshit-Prefix.pch";
@@ -274,6 +336,7 @@
 				4C12471E157DDE4F003A4EB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

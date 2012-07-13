@@ -1,0 +1,7 @@
+PODS:
+  - EGOCache (0.1.0)
+  - EGOImageLoading (0.0.1):
+    - EGOCache
+
+DEPENDENCIES:
+  - EGOImageLoading (= 0.0.1)

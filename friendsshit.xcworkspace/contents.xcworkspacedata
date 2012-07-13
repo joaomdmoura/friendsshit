@@ -4,4 +4,7 @@
    <FileRef
       location = "group:friendsshit/friendsshit.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
