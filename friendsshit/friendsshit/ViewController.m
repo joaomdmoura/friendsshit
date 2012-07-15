@@ -145,6 +145,15 @@
 
 - (void) publishPostWithOutFacebook {
     
+//    NSString * data = [[NSString alloc ] initWithFormat:@"http://friendsshit.com/api/create_shit?shit=%@", friends_shit.text ];
+//
+//    NSURL * url = [NSURL URLWithString:data];
+//    NSData *jsonData = [NSData dataWithContentsOfURL:url];
+//
+//    results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+//    
+//    [tableView reloadData];
+
 }
 
 - (void) PostWithFacebook {
