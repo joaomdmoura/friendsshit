@@ -19,7 +19,7 @@ class Api::ShitsController < ApiController
 
       params[:friend]   = { 
                             :name       => params[:name],
-                            :fb_ib      => params[:fb_ib,
+                            :fb_ib      => params[:fb_ib],
                             :photo_url  => params[:photo_url]
                           }
 
