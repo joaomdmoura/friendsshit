@@ -145,13 +145,16 @@
 
 - (void) publishPostWithOutFacebook {
     
-//    NSString * data = [[NSString alloc ] initWithFormat:@"http://friendsshit.com/api/create_shit?shit=%@", friends_shit.text ];
-//
-//    NSURL * url = [NSURL URLWithString:data];
-//    NSData *jsonData = [NSData dataWithContentsOfURL:url];
-//
+    NSString *data = [NSString stringWithFormat:@"http://friendsshit.com/api/shits/create?phrase=%@&name=%@", friends_shit.text, friends_shit_name.text ];
+    
+    NSLog(data);
+
+    NSURL * url = [NSURL URLWithString:data];
+    
+    NSData *jsonData = [NSData dataWithContentsOfURL:url];
+
 //    results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
-//    
+    
 //    [tableView reloadData];
 
 }
@@ -181,8 +184,8 @@
         user_img.frame = (CGRect){{12, 17}, 100, 100};
         [user_img.layer setBorderColor: [[UIColor grayColor] CGColor]];
         [user_img.layer setBorderWidth: 1.0];
-        user_img.layer.cornerRadius = 5.0;
         [user_img setTag:TAG_USER_IMG];
+        user_img.layer.cornerRadius = 5.0;
         
         phrase = [[UILabel alloc] initWithFrame:CGRectMake(120, -22, 173, 122) ];
         [phrase setFont:[UIFont fontWithName:@"HelveticaNeue" size:12.4]];
