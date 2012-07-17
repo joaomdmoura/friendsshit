@@ -10,7 +10,7 @@ class Api::ShitsController < ApplicationController
 
   def create_shit
     
-    params[:shit]   = { :phrase => params[:phrase], :location => params[:location] } if params[:shit].nil?
+    params[:shit]   = { :phrase => params[:phrase], :location => (params[:location]) ? params[:location] : "" } if params[:shit].nil?
 
     params[:friend] = { :name => params[:name], :fb_ib => ( params[:fb_ib] ) ? params[:fb_ib] : "" , :photo_url => ( params[:photo_url] ) ? params[:photo_url] : "" } if params[:friend].nil?
 
