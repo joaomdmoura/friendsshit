@@ -1,4 +1,4 @@
-class Api::ShitsController < ApiController
+class Api::ShitsController < ApplicationController
 
   def get_shits
     
@@ -10,26 +10,13 @@ class Api::ShitsController < ApiController
 
   def create_shit
     
-    if params[:shit].nil? && params[:friend].nil? && params[:fb].nil?
+    params[:shit]   = { :phrase => params[:phrase], :location => params[:location] } if params[:shit].nil?
 
-      params[:shit]     = { 
-                            :phrase     => params[:phrase],
-                            :location   => params[:location]
-                          }
-
-      params[:friend]   = { 
-                            :name       => params[:name],
-                            :fb_ib      => params[:fb_ib],
-                            :photo_url  => params[:photo_url]
-                          }
-
-      params[:fb]       = { 
-                            :code       => params[:code]
-                          }
-    end
+    params[:friend] = { :name => params[:name], :fb_ib => ( params[:fb_ib] ) ? params[:fb_ib] : "" , :photo_url => ( params[:photo_url] ) ? params[:photo_url] : "" } if params[:friend].nil?
 
     @shit = Shit.new( params[:shit] )
     
+
     params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "http://www.friendsshit.com/assets/troll/#{ 1 + rand(12) }.png"
     params[:friend][:name] = ( params[:friend][:name] != "" ) ? params[:friend][:name] : "Anonymous"
     @friend       = Friend.new( params[:friend] ) 
