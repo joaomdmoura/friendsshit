@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
       access_token = @oauth.get_access_token(code)
       @graph = Koala::Facebook::API.new(access_token)
       return true
+    elsif !params[:access_token_code].nil?
+      access_token = params[:access_token_code]
+      @graph = Koala::Facebook::API.new(access_token)
+      return true
     end
     return false
   end
