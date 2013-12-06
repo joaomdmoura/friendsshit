@@ -1,4 +1,4 @@
-Friendsshit::Application.routes.draw do
+Friendscrap::Application.routes.draw do
   root :to => 'shits#index'
 
   match "/shit/new", :to => "shits#create", :as => "create_shits"

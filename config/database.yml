@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: friendsshit_development
+  database: friendscrap_development
   pool: 5
   username: root
   password:
@@ -24,7 +24,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: friendsshit_test
+  database: friendscrap_test
   pool: 5
   username: root
   password:
@@ -33,7 +33,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: friendsshit_production
+  database: friendscrap_production
   pool: 5
   username: root
   password: 825315Md

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Friendsshit::Application.load_tasks
+Friendscrap::Application.load_tasks
