@@ -10,14 +10,14 @@
       <meta property="og:title" content="Friend's Shit - Cuz shit happens!" />
       <meta property="og:description" content="'<%= @shit.phrase %>'<%= " - #{@shit.friends[0].name}" if !@shit.friends.empty?%>" />
       <% if !@shit.friends.empty? %>
-        <meta property="og:image" content="http://www.friendscrap.com<%= @shit.friends[0].photo.thumb('160x160#').url %>" />
+        <meta property="og:image" content="http://www.friendscrap.com.br<%= @shit.friends[0].photo.thumb('160x160#').url %>" />
       <% else %>
-        <meta property="og:image" content="http://www.friendscrap.com/assets/mini-logo.png" />
+        <meta property="og:image" content="http://www.friendscrap.com.br/assets/mini-logo.png" />
       <% end %>
     <% else %>
       <meta property="og:title" content="Friend's Shit - Cuz shit happens!" />
       <meta property="og:description" content="A place to share yout friends shit and get some fun of others shits!" />
-      <meta property="og:image" content="http://www.friendscrap.com/assets/mini-logo.png" />
+      <meta property="og:image" content="http://www.friendscrap.com.br/assets/mini-logo.png" />
     <% end %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
