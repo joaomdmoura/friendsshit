@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'koala', '~> 1.3.0'
+gem "koala", "~> 1.8.0rc1"
 gem 'omniauth', '= 1.0.3'
 gem 'omniauth-facebook'
 gem 'kaminari'
