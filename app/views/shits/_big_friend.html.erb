@@ -10,27 +10,27 @@
     <span class="friends_name">- <%= shit.friends[0].name %></span>
     <% end %>
     <br />
-    <% 
+    <%
       how_long = ( Time.now - shit.created_at )
-      
+
       if how_long < 60
         time = "#{(how_long).round} seconds"
-      
+
       elsif how_long < 3600
         time = "#{(how_long / 60).round} minutes"
-      
+
       elsif how_long < 86400
         time = "#{(how_long / 60 / 60).round} hours"
-      
+
       else
         time = "#{(how_long / 60 / 60 / 24).round} days"
-      
-      end    
+
+      end
     %>
     <span class="friends_info"><%= time %> ago <%= (shit.location != "") ? "near of #{shit.location}" : "" %></span>
     <br/>
     <br />
-    <%= link_to image_tag("twitter_btn.jpg", :border => 0), "https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffriendscrap.com.br%2Fshit%2F#{shit.id}&source=tweetbutton&text=Friends%20Shit%20-%20Cuz%20shit%20happens!%20%7C%20'#{shit.phrase}'%20-%20#{shit.friends[0].name if !shit.friends.empty?}&url=http%3A%2F%2Ffriendscrap.com.br%2Fshit%2F#{shit.id}", :target => "_blank" %>
-    <%= link_to image_tag("facebook_btn.jpg", :border => 0), "https://www.facebook.com/sharer.php?u=http://www.friendscrap.com.br/shit/#{shit.id}&t=Friend's Shit - Cuz shit happens!", :target => "_blank" %>
+    <%= link_to image_tag("twitter_btn.jpg", :border => 0), "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ffriendsquotes.herokuapp.com%2Fshit%2F#{shit.id}&source=tweetbutton&text=Friends%20Shit%20-%20Cuz%20shit%20happens!%20%7C%20'#{shit.phrase}'%20-%20#{shit.friends[0].name if !shit.friends.empty?}&url=https%3A%2F%2Ffriendsquotes.herokuapp.com%2Fshit%2F#{shit.id}", :target => "_blank" %>
+    <%= link_to image_tag("facebook_btn.jpg", :border => 0), "https://www.facebook.com/sharer.php?u=https://friendsquotes.herokuapp.com/shit/#{shit.id}&t=Friend's Shit - Cuz shit happens!", :target => "_blank" %>
   </div>
 </div>
