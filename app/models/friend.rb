@@ -4,7 +4,7 @@ class Friend < ActiveRecord::Base
   image_accessor :photo
 
   validates :email, :uniqueness => true, :allow_nil => true
-  validates :name, :presence
+  validates :name, :presence => true
 
   belongs_to :user
   belongs_to :shit
