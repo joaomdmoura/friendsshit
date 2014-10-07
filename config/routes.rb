@@ -1,13 +1,13 @@
 Friendscrap::Application.routes.draw do
   root :to => 'shits#index'
 
-  match "/shit/new", :to => "shits#create", :as => "create_shits"
-  match "/shit/:id", :to => "shits#show", :as => "shit"
-  match "/facbeook/oath_token", :to => "facebook#oath_token", :as => "generate_oath_token"
+  post "/shit/new", :to => "shits#create", :as => "create_shits"
+  get "/shit/:id", :to => "shits#show", :as => "shit"
+  get "/facbeook/oath_token", :to => "facebook#oath_token", :as => "generate_oath_token"
 
   namespace :api, :path => 'api' do
-    match "shits/get", :to => "shits#get_shits"
-    match "shits/create", :to => "shits#create_shit"
+    get "shits/get", :to => "shits#get_shits"
+    get "shits/create", :to => "shits#create_shit"
   end
 
 

@@ -24,7 +24,7 @@ $(document).ready(function() {
     url = "/shit/" + $(this).find(".this_shit").attr("id");
     window.location = url;
   });
-  
+
   $("#buscar_btn").click(function(){
     $(".fb_friends_photo").remove();
     $("#ajax_loader_fb").fadeIn(200);
@@ -36,7 +36,7 @@ $(document).ready(function() {
       if( friend_match ){
         friends_found.push(this);
       }
-    });    
+    });
     $.each(friends_found, function() {
       $("#all_fb_friends").append("<div id='"+this.name+"' class='fb_friends_photo glass'><div id='"+this.id+"'><img src='https://graph.facebook.com/"+this.id+"/picture?type=large'/></div></div>")
     });
@@ -75,7 +75,7 @@ $(document).ready(function() {
       n_width       = height;
     }
     else {
-      n_width       = width  * w_porportion;  
+      n_width       = width  * w_porportion;
       n_height      = width;
     }
     $(image).css("width", n_width);
@@ -109,18 +109,18 @@ $(document).ready(function() {
   });
 
   $('#shit_phrase').focus(function() {
-    if (navigator.geolocation) 
+    if (navigator.geolocation)
     {
-      navigator.geolocation.getCurrentPosition( 
-     
-        function (position) {  
-     
+      navigator.geolocation.getCurrentPosition(
+
+        function (position) {
+
         mapThisGoogle(position.coords.latitude,position.coords.longitude);
-     
+
         },
         function (error)
         {
-          switch(error.code) 
+          switch(error.code)
           {
             case error.TIMEOUT:
               break;
@@ -135,7 +135,7 @@ $(document).ready(function() {
         );
     }
   });
-    
+
   function mapThisGoogle(latitude,longitude)
   {
     var geocoder = new google.maps.Geocoder();
@@ -145,6 +145,6 @@ $(document).ready(function() {
     function(data, status) {
       $("#shit_location").val(data[0].address_components[2].long_name);
     });
-    
+
   }
 });
