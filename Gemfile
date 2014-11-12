@@ -14,6 +14,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.12'
 gem 'protected_attributes'
+gem 'appsignal'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'less-rails'
