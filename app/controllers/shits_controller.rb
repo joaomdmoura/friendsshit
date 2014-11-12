@@ -23,6 +23,7 @@ class ShitsController < ApplicationController
                     "description" => "'#{@shit.phrase} %>'- #{@friend.name}",
                     "picture"     => @friend.photo.thumb('160x160#').url}
 
+      @graph = Koala::Facebook::API.new(oauth_access_token)
       @graph.put_wall_post("", {:link => "https://friendsquotes.herokuapp.com/shit/#{@shit.id}"})
       @graph.put_wall_post("", {:link => "https://friendsquotes.herokuapp.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
     end
