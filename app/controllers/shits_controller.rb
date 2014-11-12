@@ -16,14 +16,13 @@ class ShitsController < ApplicationController
     @friend.shit  = @shit
 
     if @shit.save! && @friend.save! && !@friend.fb_ib.nil?
-      fb_oath_token
       shit_obj = {  "name"        => "Friend's Shit - Cuz shit happens!",
                     "link"        => "https://friendsquotes.herokuapp.com/shit/#{@shit.id}",
                     "caption"     => "A place to share yout friends shit and get some fun of others shits!",
                     "description" => "'#{@shit.phrase} %>'- #{@friend.name}",
                     "picture"     => @friend.photo.thumb('160x160#').url}
 
-      @graph = Koala::Facebook::API.new(fb_oath_token)
+      @graph = fb_oath_token
       @graph.put_wall_post("", {:link => "https://friendsquotes.herokuapp.com/shit/#{@shit.id}"})
       @graph.put_wall_post("", {:link => "https://friendsquotes.herokuapp.com/shit/#{@shit.id}"}, "#{params[:friend][:fb_ib]}")
     end
