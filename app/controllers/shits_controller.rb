@@ -12,6 +12,9 @@ class ShitsController < ApplicationController
 
     params[:friend][:photo_url] = ( params[:friend][:photo_url] != "" ) ? params[:friend][:photo_url] : "https://friendsquotes.herokuapp.com/assets/troll/#{ 1 + rand(12) }.png"
     params[:friend][:name] = ( params[:friend][:name] != "" ) ? params[:friend][:name] : "Anonymous"
+    params[:code] = params[:fb][:code]
+    @graph = fb_oath_token
+
     @friend       = Friend.new( params[:friend] )
     @friend.shit  = @shit
 
