@@ -40,7 +40,7 @@
   font-family:Helvetica, Arial, Verdana;
   position:relative;
   list-style-type:none;
-  width:355px;
+  width:610px;
   height:148px;
   cursor: pointer;
   text-align: left;
@@ -115,7 +115,7 @@ div.friend .friends_phrase {
 
 .friends_share {
   position: absolute;
-  left:300px;
+  left:550px;
   top:90px;
 }
 

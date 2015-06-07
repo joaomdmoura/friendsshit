@@ -1,5 +1,6 @@
 $(document).ready(function() {
   tool_tip_open = false
+  var current_page = 2
 
   $('form').bind("ajax:complete", function(evt, data, status, xhr){
     $("#loading").fadeOut(200);
@@ -8,8 +9,8 @@ $(document).ready(function() {
     {
       $("#post_plus").click();
     }
-    $("#shit_phrase").val("");
-    $("#friend_name").val("");
+  $("#shit_phrase").val("");
+  $("#friend_name").val("");
   });
 
   $('form').bind("ajax:beforeSend", function(evt, data, status, xhr){
@@ -147,4 +148,15 @@ $(document).ready(function() {
     });
 
   }
+
+  $(document).infiniteScrolling({
+    loadCallback: function(){
+      $('<div/>').load('/?page='+current_page+' #shits li.friend',function(){
+        $(this).appendTo('#shits');    // once they're loaded, append them to our content area
+      });
+      current_page = current_page + 1;
+    },
+    marginThreshold: 500,
+  });
+
 });
